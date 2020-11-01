@@ -27,6 +27,9 @@
       </div>
     </div>
   </div>
+  <div v-if="todos.length == 0">
+    <div class="text-2xl font-bold">Your ToDo list is empty</div>
+  </div>
 </template>
 
 <script>
