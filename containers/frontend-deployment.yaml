@@ -34,3 +34,20 @@ spec:
     protocol: TCP
   selector:
     run: vuejs-netlify
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+spec:
+  rules:
+  - host: "nginx-ingress.web.simoncarr.co.uk"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: vuejs-netlify
+            port:
+              number: 80
