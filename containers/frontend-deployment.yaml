@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vuejs_netlify_frontend
+spec:
+  selector:
+    matchLabels:
+      app: vuejs_netlify
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: vuejs_netlify
+    spec:
+      containers:
+      - name: vuejs_netify
+        image: simoncarr/vuejs_netlify:latest
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 80
