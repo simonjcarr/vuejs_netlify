@@ -48,6 +48,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: vuejs-netlify-service
+            name: nginx-ingress-test
             port:
               number: 80
