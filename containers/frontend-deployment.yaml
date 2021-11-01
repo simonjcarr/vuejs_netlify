@@ -48,6 +48,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: vuejs-netlify
+            name: vuejs-netlify-service
             port:
               number: 80
