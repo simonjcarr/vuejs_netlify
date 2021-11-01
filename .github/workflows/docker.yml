@@ -34,6 +34,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Docker build
         run: |
-          docker build -t vuejs_netlify -f containers/Dockerfile .
+          docker build -t simoncarr/vuejs_netlify -f containers/Dockerfile .
       - name: Docker push
         run: docker push simoncarr/vuejs_netlify:latest
