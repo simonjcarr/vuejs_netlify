@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vuejsnetlifyfrontend
+  name: vuejs-netlify-frontend
 spec:
   selector:
     matchLabels:
-      app: vuejsnetlify
+      app: vuejs-netlify
   replicas: 3
   template:
     metadata:
       labels:
-        app: vuejsnetlify
+        app: vuejs-netlify
     spec:
       containers:
-      - name: vuejsnetify
+      - name: vuejs-netify
         image: simoncarr/vuejs_netlify:latest
         resources:
           requests:
